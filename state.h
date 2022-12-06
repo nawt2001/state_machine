@@ -19,7 +19,6 @@ namespace state{
         //last state has no next_state
         state(std::stack<Actions::iAction*> stack);
         state() = default;
-        void linking(std::unique_ptr<state> next_state);
         ~state() = default;
         void run();
     private:

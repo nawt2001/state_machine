@@ -20,12 +20,10 @@ void state::state::run()
         stack_.top()->action();
         stack_.pop();
     }
+    std::cout << "einde van de state" <<  std::endl;
 }
 
-void state::state::linking(std::unique_ptr<state> next_state)
-{
-    next_state_ = std::move(next_state);
-}
+
 
 state::state::state(std::stack<Actions::iAction*> stack)
 {
