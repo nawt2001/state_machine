@@ -3,3 +3,10 @@
 //
 
 #include "LedOn.h"
+#include <iostream>
+
+void LedOn::LedOn::action() const
+{
+    std::cout << "testled" << std::endl;
+
+}

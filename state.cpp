@@ -6,16 +6,20 @@
 #include "state.h"
 
 state::state::state(std::unique_ptr<state> next_state,
-                    std::stack<Actions::iAction> stack) {
+                    std::stack<Actions::iAction*> stack) {
     next_state_ = std::move(next_state);
     stack_ = stack;
+    run();
 }
 
 void state::state::run()
 {
-    std::cout << "test" << std::endl;
     //go to next state
-
+    while(!stack_.empty())
+    {
+        stack_.top()->action();
+        stack_.pop();
+    }
 }
 
 void state::state::linking(std::unique_ptr<state> next_state)
@@ -23,8 +27,9 @@ void state::state::linking(std::unique_ptr<state> next_state)
     next_state_ = std::move(next_state);
 }
 
-state::state::state(std::stack<Actions::iAction> stack)
+state::state::state(std::stack<Actions::iAction*> stack)
 {
     stack_ = stack;
+    run();
 }
 

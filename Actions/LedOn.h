@@ -9,7 +9,9 @@
 #define STATE_MACHINE_LEDON_H
 namespace LedOn{
     class LedOn: public Actions::iAction{
-
+    public:
+        LedOn() = default;
+        virtual void action() const override;
     };
 }
 #endif //STATE_MACHINE_LEDON_H
