@@ -9,23 +9,21 @@
 #include <memory>
 #include "iTransitions.h"
 #include "iAction.h"
-#include <stack>
+#include <queue>
 
 namespace state{
     class state{
     public:
         //normal state which has a next state
-        state(std::unique_ptr<state> next_state,std::stack<Actions::iAction*> stack);
+        state(std::unique_ptr<state> next_state,std::queue<Actions::iAction*> queue);
         //last state has no next_state
-        state(std::stack<Actions::iAction*> stack);
+        state(std::queue<Actions::iAction*> queue);
         state() = default;
         ~state() = default;
         void run();
     private:
-        std::string _name;
-        const char* name() {return _name.c_str();}
         std::unique_ptr<state> next_state_;
-        std::stack<Actions::iAction*> stack_;
+        std::queue<Actions::iAction*> queue_;
     };
 }
 #endif //STATE_MACHINE_STATE_H
