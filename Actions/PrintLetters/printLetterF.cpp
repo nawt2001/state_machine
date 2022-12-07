@@ -5,7 +5,7 @@
 #include <iostream>
 #include "printLetterF.h"
 
-void printLetter::printLetterF::action() const
+void printLetterF::printLetterF::action() const
 {
     std::cout << "F";
 }

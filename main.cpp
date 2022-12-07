@@ -43,36 +43,93 @@ int main() {
 //Create objects
 auto printAObject = new printLetter::printLetterA();
 auto printBObject = new printLetter::printLetterB();
-auto printCObject = new printLetter::printLetterC();
-auto printDObject = new printLetter::printLetterD();
-auto printEObject = new printLetter::printLetterE();
-auto printFObject = new printLetter::printLetterF();
-auto printGObject = new printLetter::printLetterG();
-auto printHObject = new printLetter::printLetterH();
-auto printIObject = new printLetter::printLetterI();
-auto printJObject = new printLetter::printLetterJ();
-auto printKObject = new printLetter::printLetterK();
-auto printLObject = new printLetter::printLetterL();
-auto printMObject = new printLetter::printLetterM();
-auto printNObject = new printLetter::printLetterN();
-auto printOObject = new printLetter::printLetterO();
-auto printPObject = new printLetter::printLetterP();
-auto printQObject = new printLetter::printLetterQ();
-auto printRObject = new printLetter::printLetterR();
-auto printSObject = new printLetter::printLetterS();
-auto printTObject = new printLetter::printLetterT();
-auto printUObject = new printLetter::printLetterU();
-auto printVObject = new printLetter::printLetterV();
-auto printWObject = new printLetter::printLetterW();
-auto printXObject = new printLetter::printLetterX();
-auto printYObject = new printLetter::printLetterY();
-auto printZObject = new printLetter::printLetterZ();
+auto printCObject = new printLetterC::printLetterC();
+auto printDObject = new printLetterD::printLetterD();
+auto printEObject = new printLetterE::printLetterE();
+auto printFObject = new printLetterF::printLetterF();
+auto printGObject = new printLetterG::printLetterG();
+auto printHObject = new printLetterH::printLetterH();
+auto printIObject = new printLetterI::printLetterI();
+auto printJObject = new printLetterJ::printLetterJ();
+auto printKObject = new printLetterK::printLetterK();
+auto printLObject = new printLetterL::printLetterL();
+auto printMObject = new printLetterM::printLetterM();
+auto printNObject = new printLetterN::printLetterN();
+auto printOObject = new printLetterO::printLetterO();
+auto printPObject = new printLetterP::printLetterP();
+auto printQObject = new printLetterQ::printLetterQ();
+auto printRObject = new printLetterR::printLetterR();
+auto printSObject = new printLetterS::printLetterS();
+auto printTObject = new printLetterT::printLetterT();
+auto printUObject = new printLetterU::printLetterU();
+auto printVObject = new printLetterV::printLetterV();
+auto printWObject = new printLetterW::printLetterW();
+auto printXObject = new printLetterX::printLetterX();
+auto printYObject = new printLetterY::printLetterY();
+auto printZObject = new printLetterZ::printLetterZ();
+
+auto printSpatie = new printSpecialCharactersSpatie::printSpatie();
+auto printexclamationMark = new printSpecialCharactersExclamationMark::printExclamationMark();
+auto printEndLine = new printSpecialCharactersEndLine::printEndLine();
 
 
 std::queue<Actions::iAction*> actieLijstPrintAlfabet;
+std::queue<Actions::iAction*> actieLijstPrintDemo_Woord1;
+std::queue<Actions::iAction*> actieLijstPrintDemo_Spatie;
+std::queue<Actions::iAction*> actieLijstPrintDemo_Woord2;
+std::queue<Actions::iAction*> actieLijstPrintDemo_Woord3;
+std::queue<Actions::iAction*> actieLijstPrintDemo_EindeZin;
+std::queue<Actions::iAction*> actieLijstPrintDemo_Uitroepteken;
 
 
+actieLijstPrintAlfabet.push(printAObject);
+actieLijstPrintAlfabet.push(printBObject);
+actieLijstPrintAlfabet.push(printCObject);
+actieLijstPrintAlfabet.push(printDObject);
+actieLijstPrintAlfabet.push(printEObject);
+actieLijstPrintAlfabet.push(printFObject);
+actieLijstPrintAlfabet.push(printGObject);
+actieLijstPrintAlfabet.push(printHObject);
+actieLijstPrintAlfabet.push(printIObject);
+actieLijstPrintAlfabet.push(printJObject);
+actieLijstPrintAlfabet.push(printKObject);
+actieLijstPrintAlfabet.push(printLObject);
+actieLijstPrintAlfabet.push(printMObject);
+actieLijstPrintAlfabet.push(printNObject);
+actieLijstPrintAlfabet.push(printOObject);
+actieLijstPrintAlfabet.push(printPObject);
+actieLijstPrintAlfabet.push(printQObject);
+actieLijstPrintAlfabet.push(printRObject);
+actieLijstPrintAlfabet.push(printSObject);
+actieLijstPrintAlfabet.push(printTObject);
+actieLijstPrintAlfabet.push(printUObject);
+actieLijstPrintAlfabet.push(printVObject);
+actieLijstPrintAlfabet.push(printWObject);
+actieLijstPrintAlfabet.push(printXObject);
+actieLijstPrintAlfabet.push(printYObject);
+actieLijstPrintAlfabet.push(printZObject);
+//
+//std::unique_ptr<state::state> statePrintAlfabet = std::make_unique<state::state>(actieLijstPrintAlfabet);
 
+
+actieLijstPrintDemo_Woord1.push(printPObject);
+actieLijstPrintDemo_Woord1.push(printRObject);
+actieLijstPrintDemo_Woord1.push(printOObject);
+actieLijstPrintDemo_Woord1.push(printGObject);
+actieLijstPrintDemo_Woord1.push(printRObject);
+actieLijstPrintDemo_Woord1.push(printAObject);
+actieLijstPrintDemo_Woord1.push(printMObject);
+actieLijstPrintDemo_Woord1.push(printMObject);
+actieLijstPrintDemo_Woord1.push(printIObject);
+actieLijstPrintDemo_Woord1.push(printNObject);
+actieLijstPrintDemo_Woord1.push(printGObject);
+
+actieLijstPrintDemo_Woord2.push(printIObject);
+actieLijstPrintDemo_Woord2.push(printSObject);
+
+actieLijstPrintDemo_Woord3.push(printFObject);
+actieLijstPrintDemo_Woord3.push(printUObject);
+actieLijstPrintDemo_Woord3.push(printNObject);
 
 actieLijstPrintDemo_Spatie.push(printSpatie);
 actieLijstPrintDemo_Uitroepteken.push(printexclamationMark);

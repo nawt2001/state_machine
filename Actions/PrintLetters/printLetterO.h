@@ -2,8 +2,8 @@
 // Created by twanw on 07/12/2022.
 //
 
-#ifndef STATE_MACHINE_PRINTLETTERA_H
-#define STATE_MACHINE_PRINTLETTERA_H
+#ifndef STATE_MACHINE_PRINTLETTERO_H
+#define STATE_MACHINE_PRINTLETTERO_H
 
 #include "../../iAction.h"
 
@@ -14,4 +14,4 @@ namespace printLetterO{
         virtual void action() const override;
     };
 }
-#endif //STATE_MACHINE_PRINTLETTERA_H
+#endif //STATE_MACHINE_PRINTLETTERO_H
