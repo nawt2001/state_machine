@@ -182,7 +182,30 @@ int main()
 ```
 
 ## Ons programma
+Nu we eerst onderzoek gedaan hebben na verschillende statemachines hebben we vervolgens zelf ons eigen systeem gemaakt zelf hadden we enkele eisen wat ons interressant leek en dat was vooral gebasseerd op het niet herproduceren van code. 
+Dus als voorbeeld stel je wilt een lampje in meerdere states aan zetten dan kan je 1 klasse maken en deze vervolgens in de verschillende states toevoegen. Dus op deze manier kan de zelfde stuk code meerdere keren uitgevoerd worden in de gemaakte state machine.
+Verder wouden we dat we meerdere acties konden toevoegen aan een bepaalde state en vanuit hier kwamen uit op een queue principe omdat dit op basis van FIFO werkt.
+Dus als je in een bepaalde state zit voert die dus de gehele actie lijst uit. Verder is het in onze implementatie ook mogelijk om een bepaalde actie lijst dan weer te her gebruiken in de code zodat je dit niet meer opnieuw hoeft te schrijven.
+Verder heeft elke state een next state waar de volgende state heen wijst dus stel de 1e state is klaar dan zal deze automatisch naar de 2e state gaan.
 
+### UML
+Om te beginnen hebben we eerst een UML gemaakt waar we het programma hebben uitgewerkt hoe we het wouden aanpakken. 
+Omdat de acties natuurlijk allemaal losse bestanden zijn hebben we in de UML maar 2 files gemaakt. 
+Dit omdat het eigenlijk allemaal op hetzelfde principe werkt en anders de UML zeer groot word met alle mogelijke acties als losse klasses.
+\
+![alt text](Images/Uml_ons_programma.jpg)
+
+### Code
+We leggen hier niet de gehele code uit maar willen vooral een voorbeeld geven van de implementatie van de functies zodat een bepaalde flow van een programma geimplementeerd kan worden met ons gemaakte systeem.
+Als voorbeeld hebben wij in de console een bepaalde zin laten printen en dat in elke state een woord word geprint op basis van die bepaalde actie lijst. Verder zit tussen elke staat een actie lijst die her gebruikt word om de spatie toegevoegd dus dan je kan zien dat ook bepaalde states her gebruikt kunnen worden. 
+
+```c++
+int main() {
+    
+    
+    return 0;
+}
+```
 
 ## Toepassing
 De statemachine wordt in veel dingen toegepast overal gedurende je dag kom je dingen tegen die op basis van states werken een simpel voorbeeld is bijvoorbeeld een schakelaar van een lamp.
