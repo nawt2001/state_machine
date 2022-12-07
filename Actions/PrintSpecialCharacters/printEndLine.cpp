@@ -5,6 +5,6 @@
 #include "printEndLine.h"
 #include <iostream>
 
-void printSpecialCharacters::printEndLine::action() const {
+void printSpecialCharactersEndLine::printEndLine::action() const {
     std::cout << std::endl;
 }

@@ -32,6 +32,10 @@
 #include "Actions/PrintLetters/printLetterX.h"
 #include "Actions/PrintLetters/printLetterY.h"
 #include "Actions/PrintLetters/printLetterZ.h"
+
+#include "Actions/PrintSpecialCharacters/printEndLine.h"
+#include "Actions/PrintSpecialCharacters/printExclamationMark.h"
+#include "Actions/PrintSpecialCharacters/printSpatie.h"
 #include <memory>
 
 
@@ -68,6 +72,25 @@ auto printZObject = new printLetter::printLetterZ();
 std::queue<Actions::iAction*> actieLijstPrintAlfabet;
 
 
+
+
+actieLijstPrintDemo_Spatie.push(printSpatie);
+actieLijstPrintDemo_Uitroepteken.push(printexclamationMark);
+actieLijstPrintDemo_EindeZin.push(printEndLine);
+
+std::unique_ptr<state::state> statePrintEndLine = std::make_unique<state::state>(actieLijstPrintDemo_EindeZin);
+std::unique_ptr<state::state> statePrintUitroepTeken = std::make_unique<state::state>(std::move(statePrintEndLine),actieLijstPrintDemo_Uitroepteken);
+std::unique_ptr<state::state> statePrintWoord3 = std::make_unique<state::state>(std::move(statePrintUitroepTeken),actieLijstPrintDemo_Woord3);
+std::unique_ptr<state::state> statePrintSpatie2 = std::make_unique<state::state>(std::move(statePrintWoord3), actieLijstPrintDemo_Spatie);
+std::unique_ptr<state::state> statePrintWoord2 = std::make_unique<state::state>(std::move(statePrintSpatie2),actieLijstPrintDemo_Woord2);
+std::unique_ptr<state::state> statePrintSpatie1 = std::make_unique<state::state>(std::move(statePrintWoord2),actieLijstPrintDemo_Spatie);
+std::unique_ptr<state::state> statePrintWoord1 = std::make_unique<state::state>(std::move(statePrintSpatie1),actieLijstPrintDemo_Woord1);
+
+statePrintWoord1->run();
+
+//statePrintWoord1->run();
+//statePrintSpatie1->run();
+//statePrintWoord2->run();
 
 
 

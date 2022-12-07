@@ -5,8 +5,8 @@
 #include <iostream>
 #include "printExclamationMark.h"
 
-void printSpecialCharacters::printExclamationMark::action() const
-{
-    std::cout << "!";
 
+
+void printSpecialCharactersExclamationMark::printExclamationMark::action() const {
+    std::cout << "!";
 }

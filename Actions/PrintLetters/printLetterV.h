@@ -2,16 +2,16 @@
 // Created by twanw on 07/12/2022.
 //
 
-#ifndef STATE_MACHINE_PRINTLETTERA_H
-#define STATE_MACHINE_PRINTLETTERA_H
+#ifndef STATE_MACHINE_PRINTLETTERV_H
+#define STATE_MACHINE_PRINTLETTERV_H
 
 #include "../../iAction.h"
 
-namespace printLetter{
+namespace printLetterV{
     class printLetterV: public Actions::iAction{
     public:
         printLetterV() = default;
         virtual void action() const override;
     };
 }
-#endif //STATE_MACHINE_PRINTLETTERA_H
+#endif //STATE_MACHINE_PRINTLETTERV_H

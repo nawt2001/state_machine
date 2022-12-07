@@ -5,7 +5,7 @@
 
 #ifndef STATE_MACHINE_PRINTENDLINE_H
 #define STATE_MACHINE_PRINTENDLINE_H
-namespace printSpecialCharacters{
+namespace printSpecialCharactersEndLine{
     class printEndLine: public Actions::iAction{
     public:
         printEndLine() = default;

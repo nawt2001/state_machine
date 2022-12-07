@@ -5,7 +5,7 @@
 #include <iostream>
 #include "printSpatie.h"
 
-void printSpecialCharacters::printSpatie::action() const
+void printSpecialCharactersSpatie::printSpatie::action() const
 {
     std::cout << " ";
 
