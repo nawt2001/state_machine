@@ -31,3 +31,10 @@ state::state::state(std::queue<Actions::iAction*> queue)
     queue_ = queue;
 }
 
+state::state * state::state::link(std::unique_ptr<state> next_state) {
+    next_state_ = std::move(next_state);
+    return this;
+}
+
+
+

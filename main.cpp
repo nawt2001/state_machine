@@ -135,15 +135,29 @@ actieLijstPrintDemo_Spatie.push(printSpatie);
 actieLijstPrintDemo_Uitroepteken.push(printexclamationMark);
 actieLijstPrintDemo_EindeZin.push(printEndLine);
 
-std::unique_ptr<state::state> statePrintEndLine = std::make_unique<state::state>(actieLijstPrintDemo_EindeZin);
-std::unique_ptr<state::state> statePrintUitroepTeken = std::make_unique<state::state>(std::move(statePrintEndLine),actieLijstPrintDemo_Uitroepteken);
-std::unique_ptr<state::state> statePrintWoord3 = std::make_unique<state::state>(std::move(statePrintUitroepTeken),actieLijstPrintDemo_Woord3);
-std::unique_ptr<state::state> statePrintSpatie2 = std::make_unique<state::state>(std::move(statePrintWoord3), actieLijstPrintDemo_Spatie);
-std::unique_ptr<state::state> statePrintWoord2 = std::make_unique<state::state>(std::move(statePrintSpatie2),actieLijstPrintDemo_Woord2);
-std::unique_ptr<state::state> statePrintSpatie1 = std::make_unique<state::state>(std::move(statePrintWoord2),actieLijstPrintDemo_Spatie);
-std::unique_ptr<state::state> statePrintWoord1 = std::make_unique<state::state>(std::move(statePrintSpatie1),actieLijstPrintDemo_Woord1);
+//std::unique_ptr<state::state> statePrintEndLine = std::make_unique<state::state>(actieLijstPrintDemo_EindeZin);
+//std::unique_ptr<state::state> statePrintUitroepTeken = std::make_unique<state::state>(std::move(statePrintEndLine),actieLijstPrintDemo_Uitroepteken);
+//std::unique_ptr<state::state> statePrintWoord3 = std::make_unique<state::state>(std::move(statePrintUitroepTeken),actieLijstPrintDemo_Woord3);
+//std::unique_ptr<state::state> statePrintSpatie2 = std::make_unique<state::state>(std::move(statePrintWoord3), actieLijstPrintDemo_Spatie);
+//std::unique_ptr<state::state> statePrintWoord2 = std::make_unique<state::state>(std::move(statePrintSpatie2),actieLijstPrintDemo_Woord2);
+//std::unique_ptr<state::state> statePrintSpatie1 = std::make_unique<state::state>(std::move(statePrintWoord2),actieLijstPrintDemo_Spatie);
+//std::unique_ptr<state::state> statePrintWoord1 = std::make_unique<state::state>(std::move(statePrintSpatie1),actieLijstPrintDemo_Woord1);
 
-statePrintWoord1->run();
+std::unique_ptr<state::state> state1 = std::make_unique<state::state>(actieLijstPrintDemo_Woord1);
+std::unique_ptr<state::state> state2 = std::make_unique<state::state>(actieLijstPrintDemo_Spatie);
+std::unique_ptr<state::state> state3 = std::make_unique<state::state>(actieLijstPrintDemo_Woord2);
+std::unique_ptr<state::state> state4 = std::make_unique<state::state>(actieLijstPrintDemo_Spatie);
+std::unique_ptr<state::state> state5 = std::make_unique<state::state>(actieLijstPrintDemo_Woord3);
+
+//state3->link(std::move(state4));
+state4->link(std::move(state5));
+state3->link(std::move(state4));
+state2->link(std::move(state3));
+state1->link(std::move(state2));
+
+state1->run();
+
+//statePrintWoord1->run();
 
 //statePrintWoord1->run();
 //statePrintSpatie1->run();
