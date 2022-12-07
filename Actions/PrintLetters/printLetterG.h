@@ -7,7 +7,7 @@
 
 #include "../../iAction.h"
 
-namespace printLetterG{
+namespace printLetter{
     class printLetterG: public Actions::iAction{
     public:
         printLetterG() = default;
