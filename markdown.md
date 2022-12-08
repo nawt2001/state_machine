@@ -1,11 +1,3 @@
-1. Formatting and layout/ editing are clean and make reading/ watching easy	1 
-2. The concept/ problem/ research question is properly introduced	1
-3. It is clear what the studied concept is useful for, why it’s important or applicable to programming practice	1
-4. ___**The basics of the studied concept are explained well**___, most relevant points are touched. It is clear that authors know what they write/ talk about	4
-5. Usage examples or typical applications are shown/ given.	2
-6. Appropriate references are used for the chosen form (links, bibliography, references to other videos, sites)
-
-
 # State machines 101
 
 ---
@@ -200,7 +192,8 @@ We leggen hier niet de gehele code uit maar willen vooral een voorbeeld geven va
 Als voorbeeld hebben wij in de console een bepaalde zin laten printen en dat in elke state een woord word geprint op basis van die bepaalde actie lijst. Verder zit tussen elke staat een actie lijst die her gebruikt word om de spatie toegevoegd dus dan je kan zien dat ook bepaalde states her gebruikt kunnen worden. 
 
 ```c++
-int main() {
+int main() 
+{
     
     
     return 0;
@@ -213,7 +206,8 @@ Het is een simpel systeem maar bestaat alsnog uit verschillende states zoals een
 En deze stages worden bijvoorbeeld getriggerd door een schakelaar wat bijvoorbeeld ook in states kan werken voor de “press state”, “hold state”, “release state”.
 Dus zoals te zien is kan een simpel iets als een lamp schakelen uit meerdere states bestaan. Dus daarom is het belangrijk om een eenvoudig systeem te hebben waar het makkelijk is om states toevoegen en te hergebruiken in de code.
 Ons gemaakte systeem zou hierin eventueel een uitweg kunnen zijn voor mensen die naar een oplossing zoeken voor het gestructureerd schrijven van processen waar states een belangrijke rol spelen.
-Echter is het natuurlijk nooit volledig af zo zou je eventueel de volgende dingen kunnen implementeren om het huidige systeem te verbeteren: xxx
+Echter is het natuurlijk nooit volledig af zo zou je eventueel de volgende dingen kunnen implementeren om het huidige systeem te verbeteren: op dit moment kan een state nog niet worden hergebruikt omdat er een probleem is met naar een andere state linken.
+Hiervoor zou dan een methode moeten worden ontwikkeld die deze state kan kopieren inplaats van de pointer mee geeft dus de gehele lijst met states. Verder is het programma nog niet voorzien van inputs dit kan ook gelinked worden aan een state. Dit kan gedaan worden door middel van een event systeem die dan toegevoegd kan worden aan het programma.
 
 ## Bibliografie
 https://www.itemis.com/en/yakindu/state-machine/documentation/user-guide/overview_what_are_state_machines

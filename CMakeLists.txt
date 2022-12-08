@@ -34,4 +34,4 @@ add_executable(state_machine main.cpp state.cpp state.h iAction.h iTransitions.h
         Actions/PrintSpecialCharacters/printSpatie.cpp Actions/PrintSpecialCharacters/printSpatie.h
         Actions/PrintSpecialCharacters/printExclamationMark.h Actions/PrintSpecialCharacters/printExclamationMark.cpp
         Actions/PrintSpecialCharacters/printEndLine.cpp Actions/PrintSpecialCharacters/printEndLine.h
-        )
+        program.cpp program.h program.h program.h)

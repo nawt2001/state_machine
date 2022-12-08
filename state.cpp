@@ -9,7 +9,6 @@ state::state::state(std::unique_ptr<state> next_state, std::vector<Actions::iAct
 {
     next_state_ = std::move(next_state);
     queue_ = queue;
-//    run();
 }
 
 void state::state::run()
