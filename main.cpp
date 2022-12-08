@@ -73,67 +73,67 @@ auto printexclamationMark = new printSpecialCharactersExclamationMark::printExcl
 auto printEndLine = new printSpecialCharactersEndLine::printEndLine();
 
 
-std::queue<Actions::iAction*> actieLijstPrintAlfabet;
-std::queue<Actions::iAction*> actieLijstPrintDemo_Woord1;
-std::queue<Actions::iAction*> actieLijstPrintDemo_Spatie;
-std::queue<Actions::iAction*> actieLijstPrintDemo_Woord2;
-std::queue<Actions::iAction*> actieLijstPrintDemo_Woord3;
-std::queue<Actions::iAction*> actieLijstPrintDemo_EindeZin;
-std::queue<Actions::iAction*> actieLijstPrintDemo_Uitroepteken;
+std::vector<Actions::iAction*> actieLijstPrintAlfabet;
+std::vector<Actions::iAction*> actieLijstPrintDemo_Woord1;
+std::vector<Actions::iAction*> actieLijstPrintDemo_Spatie;
+std::vector<Actions::iAction*> actieLijstPrintDemo_Woord2;
+std::vector<Actions::iAction*> actieLijstPrintDemo_Woord3;
+std::vector<Actions::iAction*> actieLijstPrintDemo_EindeZin;
+std::vector<Actions::iAction*> actieLijstPrintDemo_Uitroepteken;
 
 
-actieLijstPrintAlfabet.push(printAObject);
-actieLijstPrintAlfabet.push(printBObject);
-actieLijstPrintAlfabet.push(printCObject);
-actieLijstPrintAlfabet.push(printDObject);
-actieLijstPrintAlfabet.push(printEObject);
-actieLijstPrintAlfabet.push(printFObject);
-actieLijstPrintAlfabet.push(printGObject);
-actieLijstPrintAlfabet.push(printHObject);
-actieLijstPrintAlfabet.push(printIObject);
-actieLijstPrintAlfabet.push(printJObject);
-actieLijstPrintAlfabet.push(printKObject);
-actieLijstPrintAlfabet.push(printLObject);
-actieLijstPrintAlfabet.push(printMObject);
-actieLijstPrintAlfabet.push(printNObject);
-actieLijstPrintAlfabet.push(printOObject);
-actieLijstPrintAlfabet.push(printPObject);
-actieLijstPrintAlfabet.push(printQObject);
-actieLijstPrintAlfabet.push(printRObject);
-actieLijstPrintAlfabet.push(printSObject);
-actieLijstPrintAlfabet.push(printTObject);
-actieLijstPrintAlfabet.push(printUObject);
-actieLijstPrintAlfabet.push(printVObject);
-actieLijstPrintAlfabet.push(printWObject);
-actieLijstPrintAlfabet.push(printXObject);
-actieLijstPrintAlfabet.push(printYObject);
-actieLijstPrintAlfabet.push(printZObject);
+actieLijstPrintAlfabet.push_back(printAObject);
+actieLijstPrintAlfabet.push_back(printBObject);
+actieLijstPrintAlfabet.push_back(printCObject);
+actieLijstPrintAlfabet.push_back(printDObject);
+actieLijstPrintAlfabet.push_back(printEObject);
+actieLijstPrintAlfabet.push_back(printFObject);
+actieLijstPrintAlfabet.push_back(printGObject);
+actieLijstPrintAlfabet.push_back(printHObject);
+actieLijstPrintAlfabet.push_back(printIObject);
+actieLijstPrintAlfabet.push_back(printJObject);
+actieLijstPrintAlfabet.push_back(printKObject);
+actieLijstPrintAlfabet.push_back(printLObject);
+actieLijstPrintAlfabet.push_back(printMObject);
+actieLijstPrintAlfabet.push_back(printNObject);
+actieLijstPrintAlfabet.push_back(printOObject);
+actieLijstPrintAlfabet.push_back(printPObject);
+actieLijstPrintAlfabet.push_back(printQObject);
+actieLijstPrintAlfabet.push_back(printRObject);
+actieLijstPrintAlfabet.push_back(printSObject);
+actieLijstPrintAlfabet.push_back(printTObject);
+actieLijstPrintAlfabet.push_back(printUObject);
+actieLijstPrintAlfabet.push_back(printVObject);
+actieLijstPrintAlfabet.push_back(printWObject);
+actieLijstPrintAlfabet.push_back(printXObject);
+actieLijstPrintAlfabet.push_back(printYObject);
+actieLijstPrintAlfabet.push_back(printZObject);
 //
 //std::unique_ptr<state::state> statePrintAlfabet = std::make_unique<state::state>(actieLijstPrintAlfabet);
 
 
-actieLijstPrintDemo_Woord1.push(printPObject);
-actieLijstPrintDemo_Woord1.push(printRObject);
-actieLijstPrintDemo_Woord1.push(printOObject);
-actieLijstPrintDemo_Woord1.push(printGObject);
-actieLijstPrintDemo_Woord1.push(printRObject);
-actieLijstPrintDemo_Woord1.push(printAObject);
-actieLijstPrintDemo_Woord1.push(printMObject);
-actieLijstPrintDemo_Woord1.push(printMObject);
-actieLijstPrintDemo_Woord1.push(printIObject);
-actieLijstPrintDemo_Woord1.push(printNObject);
-actieLijstPrintDemo_Woord1.push(printGObject);
+actieLijstPrintDemo_Woord1.push_back(printPObject);
+actieLijstPrintDemo_Woord1.push_back(printRObject);
+actieLijstPrintDemo_Woord1.push_back(printOObject);
+actieLijstPrintDemo_Woord1.push_back(printGObject);
+actieLijstPrintDemo_Woord1.push_back(printRObject);
+actieLijstPrintDemo_Woord1.push_back(printAObject);
+actieLijstPrintDemo_Woord1.push_back(printMObject);
+actieLijstPrintDemo_Woord1.push_back(printMObject);
+actieLijstPrintDemo_Woord1.push_back(printIObject);
+actieLijstPrintDemo_Woord1.push_back(printNObject);
+actieLijstPrintDemo_Woord1.push_back(printGObject);
 
-actieLijstPrintDemo_Woord2.push(printIObject);
-actieLijstPrintDemo_Woord2.push(printSObject);
+actieLijstPrintDemo_Woord2.push_back(printIObject);
+actieLijstPrintDemo_Woord2.push_back(printSObject);
 
-actieLijstPrintDemo_Woord3.push(printFObject);
-actieLijstPrintDemo_Woord3.push(printUObject);
-actieLijstPrintDemo_Woord3.push(printNObject);
+actieLijstPrintDemo_Woord3.push_back(printFObject);
+actieLijstPrintDemo_Woord3.push_back(printUObject);
+actieLijstPrintDemo_Woord3.push_back(printNObject);
 
-actieLijstPrintDemo_Spatie.push(printSpatie);
-actieLijstPrintDemo_Uitroepteken.push(printexclamationMark);
-actieLijstPrintDemo_EindeZin.push(printEndLine);
+actieLijstPrintDemo_Spatie.push_back(printSpatie);
+actieLijstPrintDemo_Uitroepteken.push_back(printexclamationMark);
+actieLijstPrintDemo_EindeZin.push_back(printEndLine);
 
 //std::unique_ptr<state::state> statePrintEndLine = std::make_unique<state::state>(actieLijstPrintDemo_EindeZin);
 //std::unique_ptr<state::state> statePrintUitroepTeken = std::make_unique<state::state>(std::move(statePrintEndLine),actieLijstPrintDemo_Uitroepteken);
@@ -148,8 +148,10 @@ std::unique_ptr<state::state> state2 = std::make_unique<state::state>(actieLijst
 std::unique_ptr<state::state> state3 = std::make_unique<state::state>(actieLijstPrintDemo_Woord2);
 std::unique_ptr<state::state> state4 = std::make_unique<state::state>(actieLijstPrintDemo_Spatie);
 std::unique_ptr<state::state> state5 = std::make_unique<state::state>(actieLijstPrintDemo_Woord3);
+std::unique_ptr<state::state> state6 = std::make_unique<state::state>(actieLijstPrintDemo_Woord3);
 
 //state3->link(std::move(state4));
+state5->link(std::move(state6));
 state4->link(std::move(state5));
 state3->link(std::move(state4));
 state2->link(std::move(state3));

@@ -15,16 +15,16 @@ namespace state{
     class state{
     public:
         //normal state which has a next state
-        state(std::unique_ptr<state> next_state,std::queue<Actions::iAction*> queue);
+        state(std::unique_ptr<state> next_state,std::vector<Actions::iAction*> queue);
         //last state has no next_state
-        state(std::queue<Actions::iAction*> queue);
+        state(std::vector<Actions::iAction*> queue);
         state() = default;
         ~state() = default;
         void run();
         state * link(std::unique_ptr<state> next_state);
     private:
         std::unique_ptr<state> next_state_;
-        std::queue<Actions::iAction*> queue_;
+        std::vector<Actions::iAction*> queue_;
 
     };
 }

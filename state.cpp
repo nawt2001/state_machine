@@ -5,7 +5,7 @@
 #include <iostream>
 #include "state.h"
 
-state::state::state(std::unique_ptr<state> next_state, std::queue<Actions::iAction*> queue)
+state::state::state(std::unique_ptr<state> next_state, std::vector<Actions::iAction*> queue)
 {
     next_state_ = std::move(next_state);
     queue_ = queue;
@@ -15,18 +15,23 @@ state::state::state(std::unique_ptr<state> next_state, std::queue<Actions::iActi
 void state::state::run()
 {
     //go to next state
-    while(!queue_.empty())
-    {
-        queue_.front()->action();
-        queue_.pop();
+
+    for (int i = 0; i < queue_.size(); ++i) {
+        queue_[i]->action();
     }
+
+//    while(!queue_.empty())
+//    {
+//        queue_.front()->action();
+//        queue_.pop();
+//    }
     if(next_state_)
     {
         next_state_->run();
     }
 }
 
-state::state::state(std::queue<Actions::iAction*> queue)
+state::state::state(std::vector<Actions::iAction*> queue)
 {
     queue_ = queue;
 }
