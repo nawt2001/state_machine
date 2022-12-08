@@ -192,10 +192,27 @@ We leggen hier niet de gehele code uit maar willen vooral een voorbeeld geven va
 Als voorbeeld hebben wij in de console een bepaalde zin laten printen en dat in elke state een woord word geprint op basis van die bepaalde actie lijst. Verder zit tussen elke staat een actie lijst die her gebruikt word om de spatie toegevoegd dus dan je kan zien dat ook bepaalde states her gebruikt kunnen worden. 
 
 ```c++
+#include "Actions/PrintLetters/printLetterA.h"
+#include "Actions/PrintLetters/printLetterB.h"
+#include "state.h"
+#include "iAction.h"
 int main() 
 {
+    auto printAObject = new printLetter::printLetterA();
+    auto printBObject = new printLetter::printLetterB();
+        
+    std::vector<Actions::iAction*> actieLijst1;
+    std::vector<Actions::iAction*> actieLijst2;
     
+    actieLijst1.push_back(printAObject);
+    actieLijst2.push_back(printBObject);
     
+    std::unique_ptr<state::state> state1 = std::make_unique<state::state>(actieLijst1);
+    std::unique_ptr<state::state> state2 = std::make_unique<state::state>(actieLijst2);
+    
+    state1->link(std::move(state2));
+    
+    state1->run();
     return 0;
 }
 ```
