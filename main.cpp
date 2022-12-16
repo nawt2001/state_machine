@@ -4,6 +4,6 @@
 int main() {
     auto program = new program::program();
     program->programIsFun();
-    program->alphabet();
+    //program->alphabet();
     return 0;
 }
